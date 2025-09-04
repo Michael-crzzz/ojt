@@ -1,0 +1,43 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model WebApplication1.Models.Entities.BStudent
+
+@if(Model is null){
+    <p>No Studnt was Found with this ID</p>
+}
+else
+{
+
+    <h1>Edit Student</h1>
+
+    <form method="post">
+        <div class="b_students1">
+            <label class="form-label">Id</label>
+            <input type="text" class="form-control" asp-for="Id" readonly />
+        </div>
+        <div class="b_students1">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" asp-for="Name" />
+        </div>
+        <div class="b_students1">
+            <label class="form-label">Email</label>
+            <input type="text" class="form-control" asp-for="Email" />
+        </div>
+        <div class="b_students1">
+            <label class="form-label">Course</label>
+            <input type="text" class="form-control" asp-for="Course" />
+        </div>
+        <div class="b_students1">
+            <input type="checkbox" class="form-check-input" id="Enroll" asp-for="Enrolled" />
+            <label class="form-check-label" for="Enrolled">Enrolled</label>
+        </div>
+
+        <div class="b_students1">
+            <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+    </form>
+}
